@@ -1,0 +1,31 @@
+{
+  "username": "your_salesforce_username",
+  "password": "your_salesforce_password",
+  "security_token": "your_salesforce_security_token",
+  "login_url": "https://login.salesforce.com",
+  "domain": "login",
+  "api_version": "60.0",
+  "consistency_checks": [
+    {
+      "object": "Account",
+      "id_field": "Id",
+      "name_field": "Name",
+      "customer_field": "Name",
+      "department_field": "Department__c",
+      "category_field": "Category__c",
+      "limit": 5000
+    },
+    {
+      "object": "Contact",
+      "id_field": "Id",
+      "name_field": "Name",
+      "limit": 5000
+    },
+    {
+      "object": "Lead",
+      "id_field": "Id",
+      "name_field": "Name",
+      "limit": 5000
+    }
+  ]
+}
