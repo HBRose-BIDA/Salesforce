@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salesforce Data Consistency Pipeline</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #17212b;
+      --muted: #536171;
+      --primary: #0b5fff;
+      --border: #d9e1ea;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 15%, #e8f0ff 0%, transparent 32%),
+        radial-gradient(circle at 85% 12%, #eefaf5 0%, transparent 28%),
+        var(--bg);
+      line-height: 1.5;
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    .hero {
+      background: linear-gradient(130deg, #0b5fff 0%, #1b74ff 45%, #37a0ff 100%);
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 14px 34px rgba(11, 95, 255, 0.2);
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 0;
+      opacity: 0.95;
+      max-width: 78ch;
+    }
+
+    .grid {
+      margin-top: 18px;
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 16px rgba(23, 33, 43, 0.04);
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .links {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    .note {
+      margin-top: 16px;
+      padding: 12px 14px;
+      border-left: 4px solid #f4b400;
+      background: #fff9e8;
+      border-radius: 8px;
+      color: #5c4a13;
+      font-size: 0.93rem;
+    }
+
+    code {
+      background: #eef2f7;
+      border: 1px solid #d8dee8;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Salesforce Data Consistency Pipeline</h1>
+      <p>
+        Phased, evidence-first system for AI marketing readiness. This site links to scripts,
+        documentation, generated reports, and presentation assets.
+      </p>
+    </section>
+
+    <section class="grid" aria-label="Project navigation">
+      <article class="card">
+        <h2>Pipeline Scripts</h2>
+        <p>Run in sequence from Phase 1 through Phase 5.</p>
+        <ul class="links">
+          <li><a href="phase1_profiler.py">phase1_profiler.py</a></li>
+          <li><a href="phase2_normalizer.py">phase2_normalizer.py</a></li>
+          <li><a href="phase3_entity_resolution.py">phase3_entity_resolution.py</a></li>
+          <li><a href="phase4_conflict_detection.py">phase4_conflict_detection.py</a></li>
+          <li><a href="phase5_scorecard.py">phase5_scorecard.py</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Documentation</h2>
+        <p>Architecture, narrative, and run instructions.</p>
+        <ul class="links">
+          <li><a href="README.md">README.md</a></li>
+          <li><a href="INDEX.md">INDEX.md</a></li>
+          <li><a href="Data_Consistency_Architecture.md">Data_Consistency_Architecture.md</a></li>
+          <li><a href="Business_Story.md">Business_Story.md</a></li>
+          <li><a href="Technical_Story.md">Technical_Story.md</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Presentations</h2>
+        <p>Business and executive deck assets.</p>
+        <ul class="links">
+          <li><a href="Business_Story_Deck.pptx">Business_Story_Deck.pptx</a></li>
+          <li><a href="Business_Story_Deck_Executive.pptx">Business_Story_Deck_Executive.pptx</a></li>
+          <li><a href="build_business_ppt.py">build_business_ppt.py</a></li>
+          <li><a href="build_business_ppt_executive.py">build_business_ppt_executive.py</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Reports and Evidence</h2>
+        <p>All phase artifacts are written to the reports folder.</p>
+        <ul class="links">
+          <li><a href="reports/">reports/</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Configuration</h2>
+        <p>Use templates and keep secrets out of source control.</p>
+        <ul class="links">
+          <li><a href="config.template.json">config.template.json</a></li>
+          <li><a href="config.json">config.json</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Quick Run</h2>
+        <p>Run phases end-to-end in PowerShell.</p>
+        <ul class="links">
+          <li><code>& ".\.venv\Scripts\python.exe" .\phase1_profiler.py</code></li>
+          <li><code>& ".\.venv\Scripts\python.exe" .\phase2_normalizer.py</code></li>
+          <li><code>& ".\.venv\Scripts\python.exe" .\phase3_entity_resolution.py</code></li>
+          <li><code>& ".\.venv\Scripts\python.exe" .\phase4_conflict_detection.py</code></li>
+          <li><code>& ".\.venv\Scripts\python.exe" .\phase5_scorecard.py</code></li>
+        </ul>
+      </article>
+    </section>
+
+    <div class="note">
+      Security note: do not commit real Salesforce credentials. Use environment variables or a secure secret store for production use.
+    </div>
+  </main>
+</body>
+</html>
