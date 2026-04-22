@@ -123,8 +123,9 @@
     <section class="hero">
       <h1>Salesforce Data Consistency Pipeline</h1>
       <p>
-        Phased, evidence-first system for AI marketing readiness. This site links to scripts,
-        documentation, generated reports, and presentation assets.
+        Phased, evidence-first system for AI marketing readiness that demonstrates solution architecture,
+        Python engineering, fuzzy matching, data quality analytics, KPI design, and documentation-driven delivery.
+        This site links to scripts, configuration, and project documentation.
       </p>
     </section>
 
@@ -142,54 +143,44 @@
       </article>
 
       <article class="card">
+        <h2>Configuration</h2>
+        <p>Use the template and keep secrets out of source control.</p>
+        <ul class="links">
+          <li><a href="config.template.json">config.template.json</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
         <h2>Documentation</h2>
-        <p>Architecture, narrative, and run instructions.</p>
+        <p>Business context, technical implementation details, and run instructions.</p>
         <ul class="links">
           <li><a href="README.md">README.md</a></li>
-          <li><a href="INDEX.md">INDEX.md</a></li>
-          <li><a href="Data_Consistency_Architecture.md">Data_Consistency_Architecture.md</a></li>
           <li><a href="Business_Story.md">Business_Story.md</a></li>
           <li><a href="Technical_Story.md">Technical_Story.md</a></li>
         </ul>
       </article>
 
       <article class="card">
-        <h2>Presentations</h2>
-        <p>Business and executive deck assets.</p>
+        <h2>Pipeline Overview</h2>
+        <p>Five connected phases produce a measurable AI-readiness signal for CRM data quality.</p>
         <ul class="links">
-          <li><a href="Business_Story_Deck.pptx">Business_Story_Deck.pptx</a></li>
-          <li><a href="Business_Story_Deck_Executive.pptx">Business_Story_Deck_Executive.pptx</a></li>
-          <li><a href="build_business_ppt.py">build_business_ppt.py</a></li>
-          <li><a href="build_business_ppt_executive.py">build_business_ppt_executive.py</a></li>
+          <li><strong>Phase 1:</strong> Profiles Salesforce objects and captures baseline snapshots.</li>
+          <li><strong>Phase 2:</strong> Normalizes names/categories and logs before/after changes.</li>
+          <li><strong>Phase 3:</strong> Resolves entities using deterministic + fuzzy matching.</li>
+          <li><strong>Phase 4:</strong> Detects field-level conflicts inside matched clusters.</li>
+          <li><strong>Phase 5:</strong> Builds KPI scorecards and trend metrics across runs.</li>
         </ul>
       </article>
 
       <article class="card">
-        <h2>Reports and Evidence</h2>
-        <p>All phase artifacts are written to the reports folder.</p>
+        <h2>Evidence Outputs</h2>
+        <p>Each phase emits auditable artifacts so outcomes are traceable and repeatable.</p>
         <ul class="links">
-          <li><a href="reports/">reports/</a></li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2>Configuration</h2>
-        <p>Use templates and keep secrets out of source control.</p>
-        <ul class="links">
-          <li><a href="config.template.json">config.template.json</a></li>
-          <li><a href="config.json">config.json</a></li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2>Quick Run</h2>
-        <p>Run phases end-to-end in PowerShell.</p>
-        <ul class="links">
-          <li><code>& ".\.venv\Scripts\python.exe" .\phase1_profiler.py</code></li>
-          <li><code>& ".\.venv\Scripts\python.exe" .\phase2_normalizer.py</code></li>
-          <li><code>& ".\.venv\Scripts\python.exe" .\phase3_entity_resolution.py</code></li>
-          <li><code>& ".\.venv\Scripts\python.exe" .\phase4_conflict_detection.py</code></li>
-          <li><code>& ".\.venv\Scripts\python.exe" .\phase5_scorecard.py</code></li>
+          <li><strong>Baseline:</strong> Record counts, field coverage, and cardinality summaries.</li>
+          <li><strong>Normalization Evidence:</strong> Record-level CSV of changed values.</li>
+          <li><strong>Resolution Evidence:</strong> Candidate pair queues and confidence-scored clusters.</li>
+          <li><strong>Conflict Evidence:</strong> Severity-ranked conflict payloads for review.</li>
+          <li><strong>Executive Scorecard:</strong> Consolidated KPI snapshot and trend history.</li>
         </ul>
       </article>
     </section>
